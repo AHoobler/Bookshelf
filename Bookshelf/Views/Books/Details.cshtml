@@ -1,0 +1,32 @@
+﻿@model Bookshelf.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <div class="row">
+
+        <div class="thumbnail">
+            <p>@Html.DisplayNameFor(model => model.Category.Name) : @Html.DisplayFor(model => model.Category.Name)</p>
+
+            <p>@Html.DisplayNameFor(model => model.Title) : @Html.DisplayFor(model => model.Title)</p>
+
+            <p>@Html.DisplayNameFor(model => model.PublishedDate) :   @Html.DisplayFor(model => model.PublishedDate)</p>
+
+            <p>@Html.DisplayNameFor(model => model.Descriptions) : @Html.DisplayFor(model => model.Descriptions)</p>
+
+            <p>@Html.DisplayNameFor(model => model.ISBN) :  @Html.DisplayFor(model => model.ISBN)</p>
+        </div>
+
+
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
